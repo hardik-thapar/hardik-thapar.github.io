@@ -1,42 +1,34 @@
-# Portfolio Blog Starter
+# Hardik Thapar — Portfolio
 
-This is a porfolio site template complete with a blog. Includes:
+Static portfolio site built with plain HTML, CSS, and JavaScript.  
+No build step, no framework.
 
-- MDX and Markdown support
-- Optimized for SEO (sitemap, robots, JSON-LD schema)
-- RSS Feed
-- Dynamic OG images
-- Syntax highlighting
-- Tailwind v4
-- Vercel Speed Insights / Web Analytics
-- Geist font
+## Structure
 
-## Demo
-
-https://portfolio-blog-starter.vercel.app
-
-## How to Use
-
-You can choose from one of the following two methods to use this repository:
-
-### One-Click Deploy
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/blog&project-name=blog&repository-name=blog)
-
-### Clone and Deploy
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
-
-```bash
-pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog
+```
+site/
+├── data.js           ← all portfolio data (edit this to update content)
+├── styles.css
+├── main.js
+├── index.html
+├── about.html
+├── projects.html
+├── experience.html
+├── achievements.html
+├── publications.html
+├── icon.png
+└── title.png
 ```
 
-Then, run Next.js in development mode:
+## Updating content
+
+Edit `site/data.js`, commit, and push to `main`.  
+GitHub Actions will automatically redeploy to GitHub Pages.
+
+## Local preview
 
 ```bash
-pnpm dev
+cd site
+python3 -m http.server 8080
+# open http://localhost:8080
 ```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).

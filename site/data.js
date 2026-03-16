@@ -1,4 +1,7 @@
-export const PERSONAL = {
+// Portfolio data — converted from data.ts
+// All original data preserved exactly as-is
+
+const PERSONAL = {
   name: 'Hardik Thapar',
   title: 'AI & ML Engineer',
   location: 'Chandigarh, India',
@@ -11,7 +14,7 @@ export const PERSONAL = {
   bio: 'Second-year AI/ML engineering student who builds things that actually work. 8 national hackathon wins, IIT Bombay national finalist, selected for McKinsey, AWS, and Harvard programmes — all before finishing second year. Currently doing EEG research with a professor in Taiwan toward an SCI publication.',
 };
 
-export const PROJECTS = [
+const PROJECTS = [
   {
     title: 'VocalWell — Voice Pathology Detection',
     description: 'End-to-end ML pipeline for voice pathology detection. Audio preprocessing, MFCC and spectrogram feature extraction, deep learning classifier, FastAPI REST API, PostgreSQL backend, Docker containerization. Deployed live on Render. 12–15% accuracy improvement over baseline.',
@@ -32,7 +35,7 @@ export const PROJECTS = [
   },
 ];
 
-export const HONORS = [
+const HONORS = [
   {
     title: '1st Place — Swasthathon',
     description: 'Government of India recognition. National hackathon organised by PCI and Ministry of Health, India.',
@@ -85,7 +88,7 @@ export const HONORS = [
   },
 ];
 
-export const CERTIFICATIONS = [
+const CERTIFICATIONS = [
   {
     title: 'AWS AI & ML Scholar',
     description: 'Selected globally for AWS AI & ML Scholars program. Built and deployed GenAI application using SageMaker, Lambda, S3, and QuickSight.',
@@ -118,12 +121,12 @@ export const CERTIFICATIONS = [
   },
 ];
 
-export const EXPERIENCE = [
+const EXPERIENCE = [
   {
     title: 'Research Collaborator',
     company: 'National Kaohsiung University of Science and Technology (NKUST), Taiwan',
     date: 'Mar 2026 – Present',
-    description: 'EEG-based Alzheimer\'s Disease detection research under Assoc. Prof. Chang Kang-Ming. Applying DNN and LLM approaches on public neuroscience datasets (ADNI, Temple University EEG Corpus). Working toward SCI-indexed journal publication.',
+    description: "EEG-based Alzheimer's Disease detection research under Assoc. Prof. Chang Kang-Ming. Applying DNN and LLM approaches on public neuroscience datasets (ADNI, Temple University EEG Corpus). Working toward SCI-indexed journal publication.",
   },
   {
     title: 'Technical Executive',
@@ -145,13 +148,13 @@ export const EXPERIENCE = [
   },
 ];
 
-export const EDUCATION = [
+const EDUCATION = [
   {
     degree: 'B.E. Artificial Intelligence & Machine Learning',
     institution: 'Chitkara University',
     date: 'Aug 2024 – Aug 2028',
     gpa: '8.50 / 10.0',
-    note: 'Dean\'s List — All Semesters',
+    note: "Dean's List — All Semesters",
   },
   {
     degree: 'Leadership Development Program',
@@ -169,7 +172,7 @@ export const EDUCATION = [
   },
 ];
 
-export const SKILLS = {
+const SKILLS = {
   languages: ['Python', 'C++', 'SQL', 'Bash'],
   aiml: ['PyTorch', 'TensorFlow', 'scikit-learn', 'Hugging Face', 'LLMs', 'Signal Processing', 'Time-Series Analysis', 'EEG Data Processing', 'CatBoost', 'XGBoost'],
   engineering: ['FastAPI', 'REST APIs', 'PostgreSQL', 'Docker', 'Git', 'Linux'],
@@ -177,7 +180,7 @@ export const SKILLS = {
   learning: ['DSA', 'Operating Systems', 'DBMS', 'Computer Networks', 'System Design'],
 };
 
-export const PUBLICATIONS = [
+const PUBLICATIONS = [
   {
     title: 'None',
     venue: 'None',
