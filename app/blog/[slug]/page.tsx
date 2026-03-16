@@ -25,7 +25,7 @@ export function generateMetadata({ params }) {
   } = post.metadata
   let ogImage = image
     ? image
-    : `${baseUrl}/icon.png`
+    : `${baseUrl}/favicon.ico`
 
   return {
     title,
@@ -73,7 +73,7 @@ export default function Blog({ params }) {
             description: post.metadata.summary,
             image: post.metadata.image
               ? `${baseUrl}${post.metadata.image}`
-              : `${baseUrl}/icon.png`,
+              : `${baseUrl}/favicon.ico`,
             url: `${baseUrl}/blog/${post.slug}`,
             author: {
               '@type': 'Person',
