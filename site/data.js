@@ -3,7 +3,7 @@
 
 const PERSONAL = {
   name: 'Hardik Thapar',
-  title: 'AI & ML Engineer',
+  title: 'Software Engineer',
   location: 'Chandigarh, India',
   email: 'hardikthapar1@gmail.com',
   phone: '+91 98724-05709',
@@ -11,13 +11,13 @@ const PERSONAL = {
   linkedin: 'https://www.linkedin.com/in/hardik-thapar',
   twitter: 'https://x.com/ThaparHardik',
   leetcode: 'https://leetcode.com/u/HARDIKTHAPAR/',
-  bio: 'Second-year AI/ML engineering student who builds things that actually work. 8 national hackathon wins, IIT Bombay national finalist, selected for McKinsey, AWS, and Harvard programmes — all before finishing second year. Currently doing EEG research with a professor in Taiwan toward an SCI publication.',
+  bio: 'Third-year Computer Science student focused on software engineering and backend development. I enjoy understanding how systems work under the hood and building reliable, scalable software from first principles. Currently sharpening my problem-solving skills through DSA while exploring modern backend engineering concepts.',
 };
 
 const PROJECTS = [
   {
     title: 'VocalWell — Voice Pathology Detection',
-    description: 'End-to-end ML pipeline for voice pathology detection. Audio preprocessing, MFCC and spectrogram feature extraction, deep learning classifier, FastAPI REST API, PostgreSQL backend, Docker containerization. Deployed live on Render. 12–15% accuracy improvement over baseline.',
+    description: 'End-to-end ML platform for voice pathology detection. Audio preprocessing, MFCC feature extraction, CNN-BiLSTM classifier, FastAPI REST API, PostgreSQL backend, Docker containerization. Deployed on Render with an interactive web interface for real-time predictions.',
     stack: ['Python', 'TensorFlow', 'Librosa', 'FastAPI', 'PostgreSQL', 'Docker'],
     link: 'https://github.com/hardik-thapar/vocalwell',
   },
@@ -123,10 +123,10 @@ const CERTIFICATIONS = [
 
 const EXPERIENCE = [
   {
-    title: 'Research Collaborator',
+    title: 'Research Intern',
     company: 'National Kaohsiung University of Science and Technology (NKUST), Taiwan',
-    date: 'Mar 2026 – Present',
-    description: "EEG-based Alzheimer's Disease detection research under Assoc. Prof. Chang Kang-Ming. Applying DNN and LLM approaches on public neuroscience datasets (ADNI, Temple University EEG Corpus). Working toward SCI-indexed journal publication.",
+    date: 'Mar 2026 – May 2026',
+    description: "EEG-based Alzheimer's Disease detection research under Assoc. Prof. Chang Kang-Ming. Applying DNN and LLM approaches on public neuroscience datasets (ADNI, Temple University EEG Corpus). Worked towards SCI-indexed journal publication.",
   },
   {
     title: 'Technical Executive',
@@ -150,11 +150,11 @@ const EXPERIENCE = [
 
 const EDUCATION = [
   {
-    degree: 'B.E. Artificial Intelligence & Machine Learning',
+    degree: 'Bachelors of Engineering - Computer Science(AI-ML)',
     institution: 'Chitkara University',
     date: 'Aug 2024 – Aug 2028',
     gpa: '8.50 / 10.0',
-    note: "Dean's List — All Semesters",
+    note: "Coursework: Data Structures & Algorithms, OOP, DBMS, Operating Systems, Computer Networks, Software Engineering, Machine Learning, Data Analyses, Soft Computing",
   },
   {
     degree: 'Leadership Development Program',
@@ -173,11 +173,48 @@ const EDUCATION = [
 ];
 
 const SKILLS = {
-  languages: ['Python', 'C++', 'SQL', 'Bash'],
-  aiml: ['PyTorch', 'TensorFlow', 'scikit-learn', 'Hugging Face', 'LLMs', 'Signal Processing', 'Time-Series Analysis', 'EEG Data Processing', 'CatBoost', 'XGBoost'],
-  engineering: ['FastAPI', 'REST APIs', 'PostgreSQL', 'Docker', 'Git', 'Linux'],
-  cloud: ['AWS SageMaker', 'AWS Lambda', 'Amazon S3', 'Amazon QuickSight'],
-  learning: ['DSA', 'Operating Systems', 'DBMS', 'Computer Networks', 'System Design'],
+  languages: ['Java', 'Python', 'SQL', 'C++', 'Bash'],
+
+aiml: [
+  'LLM APIs',
+  'ML Systems',
+  'Time-Series Analysis',
+  'PyTorch',
+  'TensorFlow',
+  'scikit-learn',
+],
+
+engineering: [
+  'FastAPI',
+  'REST API Design',
+  'PostgreSQL',
+  'RDBMS',
+  'Database Schema Design',
+  'OOP',
+  'Git',
+  'GitHub',
+  'Docker',
+  'Linux',
+  'Unit Testing',
+  'Functional Testing',
+  'Modular Architecture',
+],
+
+cloud: [
+  'AWS Lambda',
+  'Amazon S3',
+  'AWS SageMaker',
+  'CI/CD Pipelines',
+  'Containerised Deployment (Docker + Render)',
+],
+
+learning: [
+  'DSA',
+  'Operating Systems',
+  'DBMS',
+  'Computer Networks',
+  'System Design',
+],
 };
 
 const PUBLICATIONS = [
