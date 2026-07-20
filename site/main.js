@@ -78,22 +78,20 @@ function renderHome() {
 
       <div class="home-bio">
         <p>
-          Hi there 👋 I'm <span class="name-strong">Hardik Thapar</span>, an AI/ML student building systems that actually work. Currently exploring voice pathology detection and LLM inference optimization.
+          Hi there 👋 I'm <span class="name-strong">Hardik Thapar</span>, a Computer Science student interested in backend engineering and AI/ML. I enjoy understanding how systems work under the hood and building software that is practical, reliable, and solves real problems.
         </p>
+
         <p>
-          My approach is simple: <span class="accent">practical first, theory second</span>. I don't wait for perfect conditions. I learn by building, breaking things down, and shipping real projects—like creating
-          <a href="projects.html">VocalWell</a>
-          when I barely knew signal processing, or developing an LLM scheduling system in 24 hours at IIT Bombay.
+          I learn best by building. Whether it's developing backend services, experimenting with machine learning, or exploring distributed systems, I like starting with fundamentals, understanding the "why" behind things, and turning ideas into working software.
         </p>
+
         <p>
-          I take concepts, build real systems, and deploy them. That's how I've secured 8 national hackathon wins and earned recognitions like
-          <span class="badge">AWS Scholar</span>,
-          <span class="badge">McKinsey Fellow</span>, and
-          <span class="badge">Harvard Aspire</span>.
+          Along the way, I've had the opportunity to work on research, compete in national hackathons, and build projects across AI and backend engineering. Each experience has reinforced the same goal—to become a better software engineer by continuously learning and building.
         </p>
+
         <p class="home-bio-links">
-          Explore my <a href="projects.html">projects</a>, deep-dive into the code on
-          <a href="${PERSONAL.github}" target="_blank" rel="noopener noreferrer">GitHub</a>, or connect on
+          Explore my <a href="projects.html">projects</a>, browse the code on
+          <a href="${PERSONAL.github}" target="_blank" rel="noopener noreferrer">GitHub</a>, or connect with me on
           <a href="${PERSONAL.linkedin}" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
         </p>
       </div>
@@ -103,19 +101,22 @@ function renderHome() {
         <ul class="highlights-list">
           <li>
             <span class="bullet-dot"></span>
-            <span><strong>VocalWell:</strong> End-to-end voice pathology ML system. <span class="highlight-stat">12-15% accuracy boost</span> over baseline.</span>
+            <span><strong>VocalWell:</strong> End-to-end voice pathology detection platform combining machine learning with a production-ready backend.</span>
           </li>
+
           <li>
             <span class="bullet-dot"></span>
-            <span><strong>LLM Scheduling Assistant:</strong> Multi-agent LLaMA-3.1/DeepSeek-7B system. Built in 24 hours, National Finalist at IIT Bombay.</span>
+            <span><strong>Research:</strong> Working with a professor at National Kaohsiung University of Science and Technology (Taiwan) on EEG-based machine learning research.</span>
           </li>
+
           <li>
             <span class="bullet-dot"></span>
-            <span><strong>Swasthathon:</strong> 1st place in government-recognized national hackathon (part of my 8 hackathon wins).</span>
+            <span><strong>Hackathons:</strong> 8× national hackathon winner, including 1st place at Swasthathon and a finalist finish at IIT Bombay.</span>
           </li>
+
           <li>
             <span class="bullet-dot"></span>
-            <span><strong>GDG Leadership:</strong> Running practical AI/ML tooling workshops for 100+ students.</span>
+            <span><strong>Community:</strong> Organizing hands-on AI and developer tooling workshops as part of the GDG student community.</span>
           </li>
         </ul>
       </div>
