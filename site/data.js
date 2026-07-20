@@ -19,7 +19,7 @@ const PROJECTS = [
     title: 'VocalWell — Voice Pathology Detection',
     description: 'End-to-end ML platform for voice pathology detection. Audio preprocessing, MFCC feature extraction, CNN-BiLSTM classifier, FastAPI REST API, PostgreSQL backend, Docker containerization. Deployed on Render with an interactive web interface for real-time predictions.',
     stack: ['Python', 'TensorFlow', 'Librosa', 'FastAPI', 'PostgreSQL', 'Docker'],
-    link: 'https://github.com/hardik-thapar/vocalwell',
+    link: 'https://github.com/hardik-thapar/vocalwell_backend.git',
   },
   {
     title: 'DengCast — Dengue Time Series Forecasting',
