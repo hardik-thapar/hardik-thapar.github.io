@@ -29,11 +29,20 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Prepare versioned site artifact
+        run: |
+          rm -rf _site
+          mkdir -p _site
+          cp -R site/. _site/
+          for file in _site/*.html; do
+            sed -i "s|src=\"data.js\"|src=\"data.js?v=${GITHUB_SHA}\"|g; s|src=\"main.js\"|src=\"main.js?v=${GITHUB_SHA}\"|g" "$file"
+          done
+
       # Upload only the site/ subfolder as the Pages artifact
       - name: Upload site folder
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./site
+          path: ./_site
 
       - name: Deploy to GitHub Pages
         id: deployment
