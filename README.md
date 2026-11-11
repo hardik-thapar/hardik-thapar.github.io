@@ -43,9 +43,3 @@ Push to a GitHub repository named `<username>.github.io` (or enable Pages on any
 `links`: the Socials row. Icons are matched by label: GitHub, LinkedIn, LeetCode, X, Email.
 
 `meta.resume` is the CV path. Replace `assets/Hardik_Thapar_CV.pdf` to update it.
-
-## Design notes
-
-- Paper `#f1f1ee`, ink `#0c0c0c`, Inter for everything.
-- The meadow video and poster load from the CloudFront URLs in `index.html`. They are hosted by a third party; to self-host, download them into `assets/` and point the `src` and `poster` attributes there.
-- The only motion is the looping video and hover fades.
