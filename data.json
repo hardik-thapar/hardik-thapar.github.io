@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "name": "Hardik Thapar",
+    "role": "Software Engineer",
+    "location": "Chandigarh, India",
+    "email": "hardikthapar1@gmail.com",
+    "resume": "assets/Hardik_Thapar_CV.pdf",
+    "updated": "2026-11-11"
+  },
+  "home": {
+    "wordmark": "Hardik Thapar",
+    "title": "I build backend systems that stay correct under load, crashes and retries.",
+    "recognition": [
+      {
+        "label": "8× hackathon wins",
+        "url": ""
+      },
+      {
+        "label": "₹2 lakh+ in prize money",
+        "url": ""
+      },
+      {
+        "label": "Harvard ALP 2025 alumni",
+        "url": ""
+      },
+      {
+        "label": "AWS ML Scholar 2025",
+        "url": ""
+      }
+    ],
+    "cv": {
+      "label": "CV",
+      "url": "assets/Hardik_Thapar_CV.pdf"
+    },
+    "text": [
+      "Go, Java, PostgreSQL, Python, Docker, FastAPI, ML",
+      "prev research (software & data) @NKUST, Taiwan"
+    ]
+  },
+  "projects": [
+    {
+      "slug": "dispatch",
+      "name": "Dispatch",
+      "tagline": "Fault-tolerant job queue on PostgreSQL",
+      "year": "2026",
+      "stack": [
+        "Go",
+        "PostgreSQL",
+        "Gin",
+        "Docker",
+        "testcontainers-go"
+      ],
+      "url": "https://github.com/hardik-thapar/dispatch"
+    },
+    {
+      "slug": "vocalwell",
+      "name": "VocalWell",
+      "tagline": "Voice analysis backend",
+      "year": "2025",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "TensorFlow",
+        "Docker Compose"
+      ],
+      "url": "https://github.com/hardik-thapar/vocalwell_backend"
+    },
+    {
+      "slug": "dengcast",
+      "name": "DengCast",
+      "tagline": "Dengue forecasting pipeline",
+      "year": "2025",
+      "stack": [
+        "Python",
+        "CatBoost",
+        "scikit-learn",
+        "pandas"
+      ],
+      "url": "https://github.com/hardik-thapar/dengcast-dengue-forecasting"
+    },
+    {
+      "slug": "llm-scheduling",
+      "name": "LLM Scheduling Assistant",
+      "tagline": "Constraint-aware scheduling agent, built in 24 hours",
+      "year": "2025",
+      "stack": [
+        "Python",
+        "LLaMA 3.1",
+        "DeepSeek-7B",
+        "vLLM",
+        "AMD MI300"
+      ],
+      "url": "https://github.com/hardik-thapar/llm-scheduling-assistant"
+    }
+  ],
+  "writeups": [
+    {
+      "title": "Why Dispatch uses SKIP LOCKED",
+      "url": "https://github.com/hardik-thapar/dispatch#readme"
+    }
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "handle": "hardik-thapar",
+      "url": "https://github.com/hardik-thapar"
+    },
+    {
+      "label": "LinkedIn",
+      "handle": "in/hardik-thapar",
+      "url": "https://www.linkedin.com/in/hardik-thapar/"
+    },
+    {
+      "label": "LeetCode",
+      "handle": "HARDIKTHAPAR · 250+ solved",
+      "url": "https://leetcode.com/u/HARDIKTHAPAR/"
+    },
+    {
+      "label": "X",
+      "handle": "@ThaparHardik",
+      "url": "https://x.com/ThaparHardik"
+    },
+    {
+      "label": "Email",
+      "handle": "hardikthapar1@gmail.com",
+      "url": "mailto:hardikthapar1@gmail.com"
+    }
+  ]
+}
