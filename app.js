@@ -10,6 +10,8 @@
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var join = function (arr, fn) { return (arr || []).map(fn).join(''); };
   var ext = ' target="_blank" rel="noopener"';
+  var page = document.body.dataset.page || 'home';
+  var HOME_LIMIT = 4;
 
   function fmtDate(iso) {
     if (!iso) return '';
@@ -44,23 +46,9 @@
     });
   }
 
-  function renderHome(d) {
+  function renderShared(d) {
     var h = d.home || {};
     var wm = $('[data-wordmark]'); if (wm && h.wordmark) wm.textContent = h.wordmark;
-    $('[data-home-title]').textContent = h.title || '';
-    var txt = Array.isArray(h.text) ? h.text : [h.text || ''];
-    $('[data-home-text]').innerHTML = join(txt, function (t) { return '<p class="lead__text">' + esc(t) + '</p>'; });
-
-    $('[data-col-projects]').innerHTML = join(d.projects, function (p) {
-      return '<li>' + (p.url ? '<a href="' + esc(p.url) + '"' + ext + '>' + esc(p.name) + '</a>' : esc(p.name)) + '</li>';
-    });
-
-    $('[data-col-writeups]').innerHTML = join(d.writeups, function (w) {
-      return '<li>' + (w.url ? '<a href="' + esc(w.url) + '"' + ext + '>' + esc(w.title) + '</a>' : esc(w.title)) + '</li>';
-    }) || '<li class="col__more">Coming soon</li>';
-
-    $('[data-col-recognition]').innerHTML = listItems(h.recognition);
-
     $('[data-socials]').innerHTML = join(d.links, function (l) {
       var key = (l.label || '').toLowerCase();
       var isMail = /^mailto:/.test(l.url || '');
@@ -68,17 +56,50 @@
     }) + (h.cv ? '<li><a class="socials__cv" href="' + esc(h.cv.url) + '"' + ext + '>' + esc(h.cv.label) + '</a></li>' : '');
   }
 
+  function renderList(d) {
+    var el = $('[data-list]');
+    var items = page === 'projects'
+      ? (d.projects || []).map(function (p) { return { label: p.name, url: p.url, note: p.tagline }; })
+      : (d.writeups || []).map(function (w) { return { label: w.title, url: w.url, note: w.note || w.source }; });
+    el.innerHTML = items.length ? join(items, function (x) {
+      return '<li>' + (x.url ? '<a href="' + esc(x.url) + '"' + ext + '>' + esc(x.label) + '</a>' : '<span>' + esc(x.label) + '</span>') +
+        (x.note ? '<span class="page__note">' + esc(x.note) + '</span>' : '') + '</li>';
+    }) : '<li class="page__empty">Coming soon.</li>';
+  }
+
+  function renderHome(d) {
+    var h = d.home || {};
+    $('[data-home-title]').textContent = h.title || '';
+    var txt = Array.isArray(h.text) ? h.text : [h.text || ''];
+    $('[data-home-text]').innerHTML = join(txt, function (t) { return '<p class="lead__text">' + esc(t) + '</p>'; });
+
+    var viewAll = function (href) { return '<li><a class="col__more" href="' + href + '">View all<span class="arr">↗</span></a></li>'; };
+    var projects = d.projects || [], writeups = d.writeups || [];
+    $('[data-col-projects]').innerHTML = join(projects.slice(0, HOME_LIMIT), function (p) {
+      return '<li>' + (p.url ? '<a href="' + esc(p.url) + '"' + ext + '>' + esc(p.name) + '</a>' : esc(p.name)) + '</li>';
+    }) + (projects.length ? viewAll('projects.html') : '');
+
+    $('[data-col-writeups]').innerHTML = (join(writeups.slice(0, HOME_LIMIT), function (w) {
+      return '<li>' + (w.url ? '<a href="' + esc(w.url) + '"' + ext + '>' + esc(w.title) + '</a>' : esc(w.title)) + '</li>';
+    }) || '<li class="col__more">Coming soon</li>') + (writeups.length ? viewAll('writeups.html') : '');
+
+    $('[data-col-recognition]').innerHTML = listItems(h.recognition);
+
+  }
+
   /* ---------- boot ---------- */
   fetch('data.json', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw new Error('data.json ' + r.status); return r.json(); })
     .then(function (d) {
       renderMeta(d.meta);
-      renderHome(d);
+      renderShared(d);
+      if (page === 'home') renderHome(d); else renderList(d);
       requestAnimationFrame(function () { document.documentElement.classList.add('is-ready'); });
     })
     .catch(function (err) {
       console.error(err);
-      $('[data-home-title]').textContent = 'Could not load data.json. Serve this folder over HTTP (python3 -m http.server).';
+      var t = $('[data-home-title]') || $('.page__title');
+      if (t) t.textContent = 'Could not load data.json. Serve this folder over HTTP (python3 -m http.server).';
       document.documentElement.classList.add('is-ready');
     });
 })();

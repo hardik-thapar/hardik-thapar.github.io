@@ -1,6 +1,6 @@
 # hardik-thapar.github.io
 
-Personal site. One page: `index.html`. Plain HTML, CSS and JavaScript, no build step, no dependencies.
+Personal site. Three pages on one shell: `index.html`, `projects.html`, `writeups.html`. Plain HTML, CSS and JavaScript, no build step, no dependencies.
 
 Every word on the page comes from `data.json`. To add a project, a writeup or a link, edit that file.
 
@@ -23,8 +23,10 @@ Push to a GitHub repository named `<username>.github.io` (or enable Pages on any
 | Path | Purpose |
 | --- | --- |
 | `data.json` | All content. Edit this. |
-| `index.html` | The page, with its CSS inline. Follows the Driftbar meadow-footer spec. |
-| `app.js` | Reads `data.json` and fills the page. |
+| `index.html` | Home. Shows the four newest projects and writeups with a View all link. |
+| `projects.html`, `writeups.html` | Full lists on the same shell (video, fog, wordmark, Socials). |
+| `styles.css` | All styles. Follows the Driftbar meadow-footer spec. |
+| `app.js` | Reads `data.json` and fills whichever page is open. |
 | `assets/` | CV and favicon. |
 
 ## Editing content
@@ -36,9 +38,9 @@ Push to a GitHub repository named `<username>.github.io` (or enable Pages on any
 - `cv`: the plain CV link at the end of the Socials row.
 - `wordmark`: the giant glass text at the bottom.
 
-`projects`: `{ "name", "url" }`. Each name links straight to its URL (usually the repository). Order in the file is the order on the page.
+`projects`: `{ "name", "url", "tagline" }`. Each name links straight to its URL (usually the repository). Newest first: the home page shows the first four, the projects page shows all with the tagline under each.
 
-`writeups`: `{ "title", "url" }`. Each title links straight to the post wherever it lives (Medium, dev.to, a GitHub README). An empty list shows "Coming soon".
+`writeups`: `{ "title", "url", "note" }`. Each title links straight to the post wherever it lives (Medium, dev.to, a GitHub README). Newest first; home shows the first four. `note` (optional) appears under the title on the writeups page, for example the venue or date. An empty list shows "Coming soon".
 
 `links`: the Socials row. Icons are matched by label: GitHub, LinkedIn, LeetCode, X, Email.
 
