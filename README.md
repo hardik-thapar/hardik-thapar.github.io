@@ -45,3 +45,11 @@ Push to a GitHub repository named `<username>.github.io` (or enable Pages on any
 `links`: the Socials row. Icons are matched by label: GitHub, LinkedIn, LeetCode, X, Email.
 
 `meta.resume` is the CV path. Replace `assets/Hardik_Thapar_CV.pdf` to update it.
+
+`assets/og.jpg` is the 1200×630 link preview used by LinkedIn, X and Slack. Regenerate it after a visible change to the home page:
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars --window-size=1200,630 --force-device-scale-factor=2 --virtual-time-budget=8000 --screenshot=/tmp/og@2x.png http://localhost:8000/ && sips -Z 1200 /tmp/og@2x.png --out /tmp/og.png && sips -s format jpeg -s formatOptions 88 /tmp/og.png --out assets/og.jpg
+```
+
+`profile-kit/` holds the GitHub, X and LinkedIn material. It is git-ignored and never deployed.

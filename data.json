@@ -9,7 +9,7 @@
   },
   "home": {
     "wordmark": "Hardik Thapar",
-    "title": "I build backend systems that stay correct under load, crashes and retries.",
+    "title": "Building backend and ML systems designed for high load, graceful failure, and strict consistency.",
     "recognition": [
       {
         "label": "8× hackathon wins",

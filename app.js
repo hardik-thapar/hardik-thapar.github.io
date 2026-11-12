@@ -59,11 +59,12 @@
   function renderList(d) {
     var el = $('[data-list]');
     var items = page === 'projects'
-      ? (d.projects || []).map(function (p) { return { label: p.name, url: p.url, note: p.tagline }; })
+      ? (d.projects || []).map(function (p) { return { label: p.name, url: p.url, note: p.tagline, stack: (p.stack || []).slice(0, 4).join(' · ') }; })
       : (d.writeups || []).map(function (w) { return { label: w.title, url: w.url, note: w.note || w.source }; });
     el.innerHTML = items.length ? join(items, function (x) {
       return '<li>' + (x.url ? '<a href="' + esc(x.url) + '"' + ext + '>' + esc(x.label) + '</a>' : '<span>' + esc(x.label) + '</span>') +
-        (x.note ? '<span class="page__note">' + esc(x.note) + '</span>' : '') + '</li>';
+        (x.note ? '<span class="page__note">' + esc(x.note) + '</span>' : '') +
+        (x.stack ? '<span class="page__stack">' + esc(x.stack) + '</span>' : '') + '</li>';
     }) : '<li class="page__empty">Coming soon.</li>';
   }
 
